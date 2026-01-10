@@ -3,15 +3,15 @@ import type { Font, FontWeight, FontStyle } from "satori";
 import fs from "node:fs/promises";
 import path from "node:path";
 // noinspection ES6UnusedImports
-import {} from "koishi-plugin-vercel-satori-png-service";
+import {} from "koishi-plugin-to-image-service";
 
-const serviceName = "vercelSatoriPngServiceFontCascadiaMono";
+const serviceName = "toImageServiceFontCascadiaMono";
 
-class VercelSatoriPngServiceFontCascadiaMono extends Service {
+class ToImageServiceFontCascadiaMono extends Service {
   private _ctx: Context;
   constructor(
     ctx: Context,
-    config: VercelSatoriPngServiceFontCascadiaMono.Config,
+    config: ToImageServiceFontCascadiaMono.Config,
   ) {
     super(ctx, serviceName);
     this._ctx = ctx;
@@ -38,7 +38,7 @@ class VercelSatoriPngServiceFontCascadiaMono extends Service {
         });
       }
     }
-    this._ctx.vercelSatoriPngService.addFont(fonts);
+    this._ctx.toImageService.addFont(fonts);
   }
 
   private fontNames: string[] = [
@@ -51,12 +51,12 @@ class VercelSatoriPngServiceFontCascadiaMono extends Service {
   ];
 }
 
-namespace VercelSatoriPngServiceFontCascadiaMono {
-  export const inject = ["vercelSatoriPngService"];
+namespace ToImageServiceFontCascadiaMono {
+  export const inject = ["toImageService"];
 
   export const usage =
     '<a target="_blank" href="https://github.com/microsoft/cascadia-code">cascadia-code</a>';
   export interface Config {}
   export const Config: Schema<Config> = Schema.object({});
 }
-export default VercelSatoriPngServiceFontCascadiaMono;
+export default ToImageServiceFontCascadiaMono;

@@ -1,13 +1,13 @@
 {
-  "name": "koishi-plugin-vercel-satori-png-service-font-cascadia-mono",
-  "description": "Provide Cascadia Mono fonts for the vercel-satori-png-service",
-  "version": "0.0.1",
+  "name": "koishi-plugin-to-image-service-font-cascadia-mono",
+  "description": "Provide Cascadia Mono fonts for the to-image-service",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "build": "cd ../../ && yarn build vercel-satori-png-service-font-cascadia-mono",
-    "pub": "cd ../../ && yarn pub vercel-satori-png-service-font-cascadia-mono",
-    "fastPub": "cd ../../ && yarn bump -3 vercel-satori-png-service-font-cascadia-mono && yarn build vercel-satori-png-service-font-cascadia-mono && yarn pub vercel-satori-png-service-font-cascadia-mono",
+    "build": "cd ../../ && yarn build to-image-service-font-cascadia-mono",
+    "pub": "cd ../../ && yarn pub to-image-service-font-cascadia-mono",
+    "fastPub": "cd ../../ && yarn bump -3 to-image-service-font-cascadia-mono && yarn build to-image-service-font-cascadia-mono && yarn pub to-image-service-font-cascadia-mono",
     "test": "node ./test/test.js"
   },
   "files": [
@@ -18,20 +18,20 @@
   "contributors": [
     "pgnqukezrdxmhjso"
   ],
-  "homepage": "https://github.com/pgnqukezrdxmhjso/koishi-plugin-vercel-satori-png-service-font-cascadia-mono",
+  "homepage": "https://github.com/pgnqukezrdxmhjso/koishi-plugin-to-image-service-font-cascadia-mono",
   "bugs": {
-    "url": "https://github.com/pgnqukezrdxmhjso/koishi-plugin-vercel-satori-png-service-font-cascadia-mono/issues"
+    "url": "https://github.com/pgnqukezrdxmhjso/koishi-plugin-to-image-service-font-cascadia-mono/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pgnqukezrdxmhjso/koishi-plugin-vercel-satori-png-service-font-cascadia-mono.git"
+    "url": "git+https://github.com/pgnqukezrdxmhjso/koishi-plugin-to-image-service-font-cascadia-mono.git"
   },
   "license": "MIT",
   "keywords": [
     "chatbot",
     "koishi",
     "plugin",
-    "vercel-satori-png-service",
+    "to-image-service",
     "font",
     "Cascadia Mono"
   ],
@@ -39,15 +39,15 @@
     "koishi": "^4.18.5"
   },
   "devDependencies": {
-    "koishi-plugin-vercel-satori-png-service": "^0.0.5"
+    "koishi-plugin-to-image-service": "^0.0.1"
   },
   "koishi": {
     "service": {
       "required": [
-        "vercelSatoriPngService"
+        "toImageService"
       ],
       "implements": [
-        "vercelSatoriPngServiceFontCascadiaMono"
+        "toImageServiceFontCascadiaMono"
       ]
     }
   }
