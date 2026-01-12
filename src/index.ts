@@ -20,17 +20,14 @@ class ToImageServiceFontCascadiaMono extends Service {
     for (let i = 0; i < this.fontNames.length; i++) {
       const fontName = this.fontNames[i];
       for (let j = 0; j < 2; j++) {
+        const filePath = `fonts/CascadiaMono-${j === 0 || fontName !== "Regular" ? fontName : ""}${["", "Italic"][j]}.ttf`;
         fonts.push({
           name: "Cascadia Mono",
           weight: ((i + 2) * 100) as FontWeight,
           style: ["normal", "italic"][j] as FontStyle,
-          data: await fs.readFile(
-            path.join(
-              __dirname,
-              `../fonts/CascadiaMono-${j === 0 || fontName !== "Regular" ? fontName : ""}${["", "Italic"][j]}.ttf`,
-            ),
-          ),
-          supports: ["satori"],
+          data: await fs.readFile(path.join(__dirname, "../", filePath)),
+          format: "ttf",
+          filePath,
         });
       }
     }
